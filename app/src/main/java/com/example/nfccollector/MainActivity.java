@@ -2,7 +2,6 @@ package com.example.nfccollector;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -420,7 +419,7 @@ public class MainActivity extends Activity {
             if (i > 0) {
                 builder.append(':');
             }
-            builder.append(String.format(Locale.US, "%02X", bytes[i] & 0xFF));
+            builder.append(String.format(Locale.US, "%X", bytes[i] & 0xFF));
         }
         return builder.toString();
     }

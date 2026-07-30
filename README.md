@@ -7,6 +7,7 @@
 - 前台自动读取 NFC 贴片编码。
 - 按扫描顺序自动生成序号，从 1 开始。
 - 当前清单本地保存，退出应用后再次打开仍保留。
+- NFC 编码按 `module-inspection` 的 `identifyTag` 明文保存规则输出：每个字节转十六进制并用冒号分隔，单个十六进制字符不补前导 0。
 - 导出 Excel 可打开的 `.xls` 表格。
 - 清零当前清单，下一盒 NFC 贴片从序号 1 重新采集。
 - 同一清单内重复编码会提示，不重复加入。
@@ -15,7 +16,7 @@
 
 调试 APK：
 
-`E:\NFCCollector\app\build\outputs\apk\debug\app-debug.apk`
+`E:\NFCCollector\app\build\outputs\apk\debug\NFCCollector-v1.2-module-inspection.apk`
 
 ## 使用方式
 
@@ -33,7 +34,7 @@
 - compileSdk 36
 - Java 17 语法级别
 
-本机可用构建命令示例：
+本机构建命令示例：
 
 ```powershell
 $env:JAVA_HOME='C:\Users\fodizi\.jdks\openjdk-24.0.2+12-54'
